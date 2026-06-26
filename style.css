@@ -86,7 +86,7 @@ body{
 
 #gauche{
     flex: 1;
-    background-color: #1a1a24;
+    background: linear-gradient(135deg, #111827 0%, #1e1b4b 100%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -111,10 +111,11 @@ body{
 }
 
 #container h2{
-    color: #1a1a24;
-    font-size: 25px;
-    margin-bottom: 30px;
-    font-weight: 700;
+    color: #111827;
+    font-size: 28px;
+    margin-bottom: 35px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
 }
 
 #container input[type="text"],
@@ -129,7 +130,7 @@ body{
     font-size: 15px;
     background-color: #f8fafc;
     outline: none;
-    transition: all 0.2 ease;
+    transition: all 0.2s ease;
 }
 
 #container input:focus,
@@ -154,7 +155,7 @@ body{
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
-    transition: background-color 0.2 ease;
+    transition: background-color 0.2s ease;
     margin-top: 10px;
 }
 
@@ -217,4 +218,88 @@ body{
 .tran-input textarea:focus{
     border-color: #00adb5;
     box-shadow: 0 0 0 3px rgba(0, 173, 181, 0.1);
+}
+
+/*ANIMATION GAUCHE*/
+
+#animation {
+    text-align: center;
+    max-width: 360px;
+}
+
+#animation h2 {
+    font-size: 34px;
+    font-weight: 800;
+    color: #ffffff;
+    margin-top: 10px;
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+}
+
+#animation p {
+    font-size: 16px;
+    color: #9ca3af;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+.scene{
+    position: relative;
+    width: 220px;
+    height: 180px;
+    margin: 0 auto 30px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.avatar-principal{
+    font-size: 80px;
+    color: #00adb5;
+    z-index: 2;
+    animation: respiration 3s infinite ease-in-out;
+}
+
+.icone-flottante {
+    position: absolute;
+    color: #ffffff;
+    opacity: 0.5;
+    z-index: 1;
+    transition: opacity 0.3s ease;
+}
+
+.diplom {
+    font-size: 28px;
+    top: 10px;
+    left: 15px;
+    animation: flotter-gauche 4s infinite ease-in-out;
+}
+
+.stage {
+    font-size: 26px;
+    top: 20px;
+    right: 15px;
+    animation: flotter-droite 4.5s infinite ease-in-out;
+}
+
+.message {
+    font-size: 24px;
+    bottom: 20px;
+    left: 45%;
+    animation: flotter-bas 3.5s infinite ease-in-out;
+}
+
+@keyframes flotter-gauche {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-12px) scale(1.05); }
+}
+
+@keyframes flotter-droite {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+@keyframes flotter-bas {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(10px); }
 }
