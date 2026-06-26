@@ -306,3 +306,66 @@ body{
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(10px); }
 }
+
+
+
+/* 1. TABLETTES ET ÉCRANS INTERMÉDIAIRES (Moins de 1024px) */
+@media screen and (max-width: 1024px) {
+    #PageP {
+        flex-direction: column; /* Aligne la partie gauche et droite l'une sous l'autre */
+        overflow-y: auto;       /* Active le défilement vertical */
+        height: auto;           /* Enlève la hauteur bloquée à 100vh */
+        min-height: 100vh;
+    }
+    
+    #gauche {
+        padding: 60px 20px;
+        min-height: 40vh;       /* L'animation prend 40% de la hauteur de l'écran */
+    }
+    
+    #droite {
+        padding: 50px 20px;
+        min-height: 60vh;       /* Le formulaire prend le reste de la hauteur */
+    }
+}
+
+/* 2. SMARTPHONES ET PETITS ÉCRANS (Moins de 480px) */
+@media screen and (max-width: 480px) {
+    /* Ajustements de la zone d'animation à gauche */
+    #animation h2 { 
+        font-size: 28px; 
+    }
+    #animation p { 
+        font-size: 14px; 
+    }
+    .scene { 
+        width: 180px; 
+        height: 150px; 
+        margin-bottom: 15px; 
+    }
+    .avatar-principal { 
+        font-size: 65px; 
+    }
+    .diplom, .stage, .message { 
+        font-size: 20px; 
+    }
+
+    /* Ajustements du formulaire à droite */
+    #container h2 { 
+        font-size: 24px; 
+        margin-bottom: 30px; 
+    }
+    .tran-input { 
+        margin-bottom: 20px; 
+    }
+    .tran-input input, 
+    .tran-input textarea { 
+        padding: 12px 14px; 
+        font-size: 14px; 
+    }
+    .tran-input label { 
+        left: 14px; 
+        top: 12px; 
+        font-size: 14px; 
+    }
+}
