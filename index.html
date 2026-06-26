@@ -4,24 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Demande de Stages</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div id="container">
-        <h2>
-            Formulaire Stages
-        </h2>
-
-        <form action="https://formspree.io/f/mvzjaoyq" method="POST">
-            <input type="text" name="nom" placeholder="Nom"><br>
-            <input type="text" name="prenom" placeholder="Prenom"><br>
-            <input type="number" name="telephone" placeholder="Telephone"><br>
-            <input type="email" name="email" placeholder="Email"><br>
-            <textarea name="mtv" id="" placeholder="Motivation"></textarea><br>
-            <button type="submit">Envoyer la demande</button><br>
-        </form>
-
+    <div id="charM">
+        <div class="charC">
+            <h1 class="logo">Madjib</h1>
+            <div class="charB"></div>
+        </div>
     </div>
+
+    <div id="PageP" class="cache">
+
+        <div id="gauche">
+            <div id="animation">
+                <h2>Espaces Stages</h2>
+                <p>Trouvez votre opportunité en quelque clics</p>
+            </div>
+        </div>
+
+        <div id="droite">
+            <div id="container">
+                <h2>
+                    Formulaire Stages
+                </h2>
+
+                <form action="https://formspree.io/f/mvzjaoyq" method="POST">
+                    <input type="text" name="nom" placeholder="Nom"><br>
+                    <input type="text" name="prenom" placeholder="Prenom"><br>
+                    <input type="number" name="telephone" placeholder="Telephone"><br>
+                    <input type="email" name="email" placeholder="Email"><br>
+                    <!--
+                    <label>Déposez votre CV (PDF) :</label><br>
+                    <input type="file" id="cv" name="cv" accept=".pdf" required><br>
+                    -->
+                    <textarea name="mtv" id="" placeholder="Motivation"></textarea><br>
+                    <button type="submit">Envoyer la demande</button><br>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
     
 </body>
 </html>
