@@ -111,11 +111,14 @@ body{
 }
 
 #container h2{
-    color: #111827;
     font-size: 28px;
     margin-bottom: 35px;
     font-weight: 800;
     letter-spacing: -0.5px;
+    text-transform: capitalize;
+    background: linear-gradient(135deg, #00adb5 0%, #007a80 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 #container input[type="text"],
@@ -195,7 +198,7 @@ body{
     font-size: 15px;
     pointer-events: none;
     transition: all 0.2s ease;
-    background-color: #ffffff;
+    background-color: #f8fafc;
     padding: 0 4px;
 }
 
